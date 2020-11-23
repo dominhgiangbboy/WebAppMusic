@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .title-text {
+        font-weight: bold;
+        font-size: 20pt;
+        color:aliceblue;
+    }
+    .containerForm {
+        background: rgb(45,3,59);
+        background: linear-gradient(90deg, rgba(45,3,59,1) 2%, rgba(150,17,146,1) 39%, rgba(141,0,255,1) 100%);
+        width: 100%;
+
+    }
+
+</style>
+<body>
+    <div id="app" class="containerForm">
+        <div style="padding-top:20px; padding-bottom:20px" class="text-center row">
+            <span class="title-text">{{ title }}</span>
+        </div>
+        <div 
+        style="        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: auto;
+        
+       "
+             class="text-center row" >
+            <div class="input-group align-items-center " style="left: 40%;">
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+        </div>
+        <div style="padding-top:20px; padding-bottom:20px;margin:auto" class="text-center row " >
+            <div class="input-group align-items-center" style="left: 40%;">
+                <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" placeholder="Enter password">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            title: 'MUSIK BOX'
+
+        }
+    })
+</script>
