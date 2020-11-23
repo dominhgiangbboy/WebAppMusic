@@ -11,29 +11,47 @@
         background: rgb(45,3,59);
         background: linear-gradient(90deg, rgba(45,3,59,1) 2%, rgba(150,17,146,1) 39%, rgba(141,0,255,1) 100%);
         width: 100%;
-
+        z-index: -1;
     }
-
+    .input-field {
+        font-family: Poppins-Medium;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #666666;
+        display: block;
+        width: 100%;
+        background: #e6e6e6;
+        height: 50px;
+        border-radius: 25px;
+        padding: 0 30px 0 68px;
+        outline: none;
+        border:none;
+    }
+    .loginForm {
+        border-radius: 25px;
+        background: white;
+        width: 40%;
+        height: 50%;
+        vertical-align: middle;
+        text-align: center;
+    }
 </style>
 <body>
     <div id="app" class="containerForm">
         <div style="padding-top:20px; padding-bottom:20px" class="text-center row">
             <span class="title-text">{{ title }}</span>
         </div>
-        <div 
-        style="        padding-top: 20px;
-        padding-bottom: 20px;
-        margin: auto;
-        
-       "
-             class="text-center row" >
-            <div class="input-group align-items-center " style="left: 40%;">
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        <div class="loginForm">
+            <div style="padding-top: 20px;padding-bottom: 0px;margin: auto;"
+                 class="text-center row">
+                <div class="input-group align-items-center " style="left: 40%;">
+                    <input type="email" class="input-field" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
             </div>
-        </div>
-        <div style="padding-top:20px; padding-bottom:20px;margin:auto" class="text-center row " >
-            <div class="input-group align-items-center" style="left: 40%;">
-                <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" placeholder="Enter password">
+            <div style="padding-top:20px; padding-bottom:20px;margin:auto" class="text-center row ">
+                <div class="input-group align-items-center" style="left: 40%;">
+                    <input type="password" class="input-field" id="inputPassword" aria-describedby="passwordHelp" placeholder="Enter password">
+                </div>
             </div>
         </div>
     </div>
@@ -43,7 +61,6 @@
         el: '#app',
         data: {
             title: 'MUSIK BOX'
-
         }
     })
 </script>
